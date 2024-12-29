@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Login Screen -->
+    <div id="login-screen">
+        <h1>Login</h1>
+        <label for="phone">Phone Number:</label>
+        <div id="phone-input">
+            <select id="country-code">
+                <option value="+1">+1</option>
+                <option value="+91">+91</option>
+                <option value="+44">+44</option>
+            </select>
+            <input type="text" id="phone" placeholder="Enter your phone number">
+        </div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Enter your name">
+        <button id="login-btn">Login</button>
+    </div>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen" style="display: none;">
+        <h1>Loading...</h1>
+        <div id="logos">
+            <img src="android-logo.png" alt="Android Logo">
+            <img src="ios-logo.png" alt="iOS Logo">
+        </div>
+    </div>
+
+    <!-- Main Screen -->
+    <div id="main-screen" style="display: none;">
+        <header>
+            <h1>Games Store</h1>
+            <button id="menu-btn">☰</button>
+        </header>
+        <aside id="sidebar" style="display: none;">
+            <div id="profile">
+                <img id="profile-pic" src="default-avatar.png" alt="Default Image">
+                <span id="username"></span>
+                <button id="change-pic-btn">Change Picture</button>
+            </div>
+            <ul>
+                <li id="home-tab">Home</li>
+                <li id="leaderboard-tab">Leaderboard</li>
+                <li id="help-tab">Get Help</li>
+            </ul>
+        </aside>
+        <main id="content">
+            <!-- Home Tab -->
+            <div id="home-tab-content">
+                <h2>Games</h2>
+                <div class="game">
+                    <h3>Indian Mini Truck</h3>
+                    <p><a href="#" class="download-link" data-link="https://drive.google.com/file/d/1-bu-NoOtbGVLklZjIknvEchpmba8zJsZ/view?usp=drivesdk">Download</a></p>
+                </div>
+                <div class="game">
+                    <h3>HS On Roads</h3>
+                    <p><a href="#" class="download-link" data-link="https://drive.google.com/file/d/16svKcHl4Ygslp1d7Ak3Amx2ucgNph9ON/view?usp=drivesdk">Download</a></p>
+                </div>
+                <div class="game">
+                    <h3>Opw India</h3>
+                    <p><a href="#" class="download-link" data-link="https://drive.google.com/file/d/125EBX9Pjn1OSjZX1njhnJv_KtmbNuvUF/view?usp=drivesdk">Download</a></p>
+                </div>
+            </div>
+            <!-- Help Tab -->
+            <div id="help-tab-content" style="display: none;">
+                <h2>Contact Support</h2>
+                <p>Email: <a href="mailto:hazik@support.in">hazik@support.in</a></p>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
